@@ -35,16 +35,16 @@ void roteador() {
             printf("Digite a quantidade de braços!\n");
             scanf("%d", &bracos[num]);
             
-            printf("Digite A Cor Do Olho Direito!");
+            printf("Digite A Cor Do Olho Direito!\n");
             scanf("%s", &olhoDir[num]);
             
-            printf("DIGITE A COR DO OUTRO OLHO!");
+            printf("DIGITE A COR DO OUTRO OLHO!\n");
             scanf("%s", &outrOlho[num]);
 
             printf("Obrigada.\n");
 
             printf("O nome da sua alma é %s\n", nome[num]);
-            printf("Ela possui %d braços", bracos[num]);
+            printf("Ela possui %d braços\n", bracos[num]);
             printf("Minha cabeça dói\n");
             printf("A cor do Outro Olho é %s\n", outrOlho[num]);
 
@@ -60,12 +60,13 @@ void roteador() {
 
             if (i == 999) {
                 for (int o = 0; o <= num; o++) {
+                    printf("Seu ID é %d\n", o);
                     printf("O nome da sua alma é %s.\n", nome[o]);
-                    printf("Ela possui %d braços.", bracos[o]);
+                    printf("Ela possui %d braços.\n", bracos[o]);
                     printf("A cor de seu olho direito é %s.\n", olhoDir[o]);
                     printf("A cor do Outro Olho é %s.\n", outrOlho[o]);
                 }
-            } else if (i >= num) {
+            } else if (i > num) {
                 printf("Não há nenhuma alma aqui.\n");
             } else {
                 printf("O nome da sua alma é %s.\n", nome[i]);
@@ -75,10 +76,55 @@ void roteador() {
             }
             break;
         case 3:
-            printf("A fazer\n");
+
+            printf("Digite o ID da alma:\n");
+            int o;
+            scanf("%d", &o);
+            
+            printf("Digite 1 para editar o nome.\n");
+            printf("Digite 2 para editar o olho direito.\n");
+            printf("Digite 3 para editar o Outro Olho.\n");
+            printf("Digite 4 para editar a quantidade de braços.\n");
+
+            int p;
+            scanf("%d", &p);
+
+            switch (p) {
+                case 1:
+                    printf("Digite um novo nome.\n");
+                    scanf("%s", &nome[o]);
+                    break;
+                case 2:
+                    printf("Digite um novo olho direito.\n");
+                    scanf("%s", &olhoDir[o]);
+                    break;
+                case 3:
+                    printf("Digite um novo Outro Olho.\n");
+                    scanf("%s", &outrOlho[o]);
+                    break;
+                case 4:
+                    printf("Digite uma nova quantidade de bracos.\n");
+                    scanf("%s", &bracos[o]);
+                    break;
+                default:
+                    printf("Opcao invalida.\n");
+            }
+            printf("Editado com sucesso.\n");
+
             break;
         case 4:
-            printf("A fazer\n");
+            printf("Digite o ID da alma:\n");
+            int o;
+            scanf("%d", &o);
+            
+            nome[o] = "";
+            olhoDir[o] = "";
+            outrOlho[o] = "";
+            bracos[o] = "";
+            
+            printf("Apagado com sucesso.");
+            int o = 0;
+
             break;
         case 5:
         printf("Obrigada por me usar.\n");
