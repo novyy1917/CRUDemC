@@ -14,7 +14,11 @@ int contaLet(char strang[]) {
     }
 }*/
 
-void umadez() {
+int main() {
+
+    
+
+    void umadez() {
     printf("De 1 a 10, o quanto ela/ele");
 }
 
@@ -33,16 +37,9 @@ typedef struct Gay {
 
 } Viadaa;
 
-Viadaa *vagabas;
+    Viadaa *vagabas;
 
-vagabas = malloc(sizeof(Viadaa));
-
-    vagabas[0].nome = "vazio";
-    vagabas[0].dar = 0;
-    vagabas[0].comer = 0;
-    vagabas[0].bear = 0;
-    vagabas[0].twink = 0;
-    vagabas[0].mostrar = 0;
+    vagabas = malloc(sizeof(Viadaa));
 
 int criarBixa() {
 
@@ -74,7 +71,7 @@ int criarBixa() {
     numDeBixas++;
     realloc(vagabas, (sizeof(Viadaa) * numDeBixas));
 
-    vagabas[numDeBixas - 1].nome = tempNome;
+    /* vagabas[numDeBixas - 1].nome = tempNome; */
     vagabas[numDeBixas - 1].dar = tempDar;
     vagabas[numDeBixas - 1].comer = tempComer;
     vagabas[numDeBixas - 1].bear = ebear;
@@ -82,7 +79,7 @@ int criarBixa() {
     vagabas[numDeBixas - 1].mostrar = 1;
 }
 
-lerBixa() {
+void lerBixa() {
     for (int i = 0; i < numDeBixas; i++) {
         if (vagabas[i].mostrar == 1) {
             printf("%s\n", vagabas[i].nome);
@@ -97,7 +94,7 @@ lerBixa() {
     }
 }
 
-editarBixa() {
+void editarBixa() {
     int respon, edicaoInt;
     char edicaoChar[20];
     int vagaAEditar;
@@ -120,7 +117,7 @@ editarBixa() {
     case 1:
         printf("Novo dado:\n");
         scanf("%s", &edicaoChar);
-        vagabas[vagaAEditar].nome = edicaoChar;
+        /* vagabas[vagaAEditar].nome = edicaoChar; */
         break;
     case 2:
         printf("Novo dado:\n");
@@ -147,7 +144,7 @@ editarBixa() {
     }
 }
 
-deletarBixa() {
+void deletarBixa() {
     int bixaADeletar;
 
     printf("Que bixa voce gostaria de deletar?\n");
@@ -190,7 +187,12 @@ void roteador() {
     }
 }
 
-int main() {
+    /*vagabas->nome = "vazio"; */
+    vagabas->dar = 0;
+    vagabas->comer = 0;
+    vagabas->bear = 0;
+    vagabas->twink = 0;
+    vagabas->mostrar = 0;
 
     int fim = 1;
     printf("Bem vindo ao GuardaBixas 2000!\n");
